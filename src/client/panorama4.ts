@@ -5,25 +5,28 @@ import { panorama_form } from './panorama_create';
 import { infoicon2,infoicon3 } from './panorama2';
 import { create_info_icon } from './info_icon';
 import { invoDiv } from './info_div';
+import { panorama3,navicon4,navicon5 } from './panorama3';
 
 //dodawanie panoramy
 export const panorama4 = new panorama_form('./sad3.png').main;
+panorama4.rotateY(Math.PI)
 
 //dodawanie ikony nawigacyjnej
-export const navicon4 = new create_icon(0, -13, 20,'nav4');
-panorama4.add(navicon4.main)
+export const navicon6 = new create_icon(0, -13, -20,'nav6');
+
 
 //event-click ikony nawigacyjnej
-navicon4.element.addEventListener('pointerdown', () => {
-    panorama4.remove(navicon4.main);
+navicon6.element.addEventListener('pointerdown', () => {
+    panorama4.remove(navicon6.main);
     panorama4.remove(infoicon4.main)
     scene.remove(panorama4);
-    scene.add(panorama2);
-    panorama2.add(navicon2.main);
-    panorama2.add(navicon3.main);
-    panorama2.add(infoicon2.main)
-    panorama2.add(infoicon3.main)
-    navicon4.reset_size();
+    scene.add(panorama3);
+    panorama3.add(navicon4.main);
+    panorama3.add(navicon5.main);
+    //panorama2.add(infoicon2.main)
+    //panorama2.add(infoicon3.main)
+    navicon6.reset_size();
+    console.log('nav6')
 })
 
 //dodawanie ikony-obrazek
