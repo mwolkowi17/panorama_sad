@@ -1,8 +1,6 @@
 import { create_icon } from './navigation_icon';
 import { scene } from './client';
-import { panorama2,navicon2,navicon3 } from './panorama2';
 import { panorama_form } from './panorama_create';
-import { infoicon2,infoicon3 } from './panorama2';
 import { create_info_icon } from './info_icon';
 import { invoDiv } from './info_div';
 import { panorama3,navicon4,navicon5 } from './panorama3';

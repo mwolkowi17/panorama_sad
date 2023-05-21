@@ -6,6 +6,7 @@ export class invoDiv {
     offButton: HTMLElement
     image1: HTMLElement
     image_adress: string
+    valvleDetails: HTMLElement
 
     constructor(plik:string) {
         this.image_adress=plik
@@ -24,6 +25,11 @@ export class invoDiv {
         this.main.style.top = '40px';
         this.main.style.left = '40px';
       
+        this.valvleDetails = document.createElement('div');
+        this.valvleDetails.className = 'details_valve';
+        this.valvleDetails.textContent = 'The 1/2 in. SharkBite Push-to-Connect Ball Valve is the easiest way to install a new or replacement shut-off ball valve. The single lever control allows for easy operation and the valve is perfect for potable water and hydronic applications where a shut-off is needed. SharkBite fittings allow you to join copper, CPVC or PEX pipe in any combination with no soldering, clamps, unions or glue. Just insert the pipe and the stainless steel teeth bite down and grip tight, while a specially formulated O-ring compresses to create a perfect seal.'
+        this.main.appendChild(this.valvleDetails);
+        
 
         this.offButton = document.createElement('div')
         this.offButton.className = 'offButton'

@@ -1,7 +1,7 @@
 import { create_icon } from './navigation_icon';
 import { create_icon_left } from './navigation_icon_left';
 import { scene } from './client';
-import { panorama1, navicon1 } from './panorama1';
+import { panorama1, navicon1,infoicon1 } from './panorama1';
 import { panorama3, navicon4, infoicon4,navicon5 } from './panorama3';
 import { panorama_form } from './panorama_create';
 import { create_info_icon } from './info_icon';
@@ -46,8 +46,9 @@ navicon3.element.addEventListener('pointerdown', () => {
     scene.remove(panorama2);
     scene.add(panorama1);
     panorama1.add(navicon1.main)
-    navicon2.reset_size();
-    navicon3.reset_size();
+    panorama1.add(infoicon1.main)
+    navicon1.reset_size();
+   
 
 
 })
@@ -55,7 +56,7 @@ navicon3.element.addEventListener('pointerdown', () => {
 //dodawanie ikony-obrazek
 export const infoicon2 = new create_info_icon(-28, -7, -30, 'imageInfo1')
 
-panorama2.add(infoicon2.main)
+//panorama2.add(infoicon2.main)
 
 //event-click ikony-obrazek
 infoicon2.element.addEventListener('pointerdown', () => {
@@ -77,7 +78,7 @@ infoicon2.element.addEventListener('pointerdown', () => {
 
 //dodawanie ikony-obrazek
 export const infoicon3 = new create_info_icon(48, 15, -30, 'imageInfo2')
-panorama2.add(infoicon3.main)
+//panorama2.add(infoicon3.main)
 
 //event-click ikony-obrazek
 infoicon3.element.addEventListener('pointerdown', () => {
