@@ -7,17 +7,17 @@ import { create_info_icon } from './info_icon';
 import { invoDiv } from './info_div';
 
 //dodawanie panoramy
-export const panorama3 = new panorama_form('./sad3.png').main;
+export const panorama4 = new panorama_form('./sad3.png').main;
 
 //dodawanie ikony nawigacyjnej
 export const navicon4 = new create_icon(0, -13, 20,'nav4');
-panorama3.add(navicon4.main)
+panorama4.add(navicon4.main)
 
 //event-click ikony nawigacyjnej
 navicon4.element.addEventListener('pointerdown', () => {
-    panorama3.remove(navicon4.main);
-    panorama3.remove(infoicon4.main)
-    scene.remove(panorama3);
+    panorama4.remove(navicon4.main);
+    panorama4.remove(infoicon4.main)
+    scene.remove(panorama4);
     scene.add(panorama2);
     panorama2.add(navicon2.main);
     panorama2.add(navicon3.main);
@@ -28,7 +28,7 @@ navicon4.element.addEventListener('pointerdown', () => {
 
 //dodawanie ikony-obrazek
 export const infoicon4 = new create_info_icon(15, 12, -20, 'imageInfo4')
-panorama3.add(infoicon4.main)
+panorama4.add(infoicon4.main)
 
 //event-click ikony-obrazek
 infoicon4.element.addEventListener('pointerdown', () => {

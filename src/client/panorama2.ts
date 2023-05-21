@@ -2,7 +2,7 @@ import { create_icon } from './navigation_icon';
 import { create_icon_left } from './navigation_icon_left';
 import { scene } from './client';
 import { panorama1, navicon1 } from './panorama1';
-import { panorama3, navicon4, infoicon4 } from './panorama3';
+import { panorama3, navicon4, infoicon4,navicon5 } from './panorama3';
 import { panorama_form } from './panorama_create';
 import { create_info_icon } from './info_icon';
 import { invoDiv } from './info_div';
@@ -31,6 +31,7 @@ navicon2.element.addEventListener('pointerdown', () => {
     scene.add(panorama3);
     panorama3.add(navicon4.main);
     panorama3.add(infoicon4.main)
+    panorama3.add(navicon5.main)
     navicon2.reset_size();
     navicon3.reset_size();
 })
