@@ -26,6 +26,7 @@ export const navicon3 = new create_icon(18, -20, -30, 'nav3');
 //event-click ikony nawigacyjnej
 navicon2.element.addEventListener('pointerdown', () => {
     console.log('navicon2')
+    infoicon2.element.style.visibility='visible'
     panorama2.remove(navicon2.main);
     panorama2.remove(navicon3.main);
     panorama2.remove(infoicon2.main)
@@ -35,11 +36,13 @@ navicon2.element.addEventListener('pointerdown', () => {
     panorama3.add(navicon5.main)
     navicon2.reset_size();
     navicon3.reset_size();
+    infodiv2.main.style.visibility='hidden'
 })
 
 //event-click ikony nawigacyjnej
 navicon3.element.addEventListener('pointerdown', () => {
     console.log("navicon3")
+    infoicon2.element.style.visibility='visible'
     panorama2.remove(navicon2.main);
     panorama2.remove(navicon3.main);
     panorama2.remove(infoicon2.main)
@@ -48,7 +51,11 @@ navicon3.element.addEventListener('pointerdown', () => {
     panorama1.add(navicon1.main)
     panorama1.add(infoicon1.main)
     navicon1.reset_size();
+    infodiv2.main.style.visibility='hidden'
 })
+
+//dodawanie obrazka
+const infodiv2 = new invoDivClean("160px", tytuly[1], teksty[1]);
 
 //dodawanie ikony-obrazek
 export const infoicon2 = new create_info_icon(17, -7, -30, 'imageInfo1')
@@ -58,7 +65,7 @@ export const infoicon2 = new create_info_icon(17, -7, -30, 'imageInfo1')
 //event-click ikony-obrazek
 infoicon2.element.addEventListener('pointerdown', () => {
     console.log('pointer clicked');
-    const infodiv2 = new invoDivClean("160px", tytuly[1], teksty[1]);
+    
     document.body.appendChild(infodiv2.main)
     infodiv2.main.style.visibility = 'visible';
     infoicon2.element.style.visibility = 'hidden';

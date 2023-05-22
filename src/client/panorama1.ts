@@ -20,6 +20,7 @@ setTimeout(() => {
 
 //event-click ikony nawigacyjnej
 navicon1.element.addEventListener('pointerdown', () => {
+    infoicon1.element.style.visibility='visible'
     panorama1.remove(navicon1.main)
     panorama1.remove(infoicon1.main)
     scene.remove(panorama1);
@@ -29,10 +30,14 @@ navicon1.element.addEventListener('pointerdown', () => {
     navicon1.reset_size();
     panorama2.add(infoicon2.main)
     //panorama2.add(infoicon3.main)
+    infodiv1.main.style.visibility='hidden'
     
    
 
 })
+
+//dodawanie obrazka
+const infodiv1 = new invoDivClean("120px",tytuly[0], teksty[0]);
 
 //dodawanie ikony-obrazek
 export const infoicon1 = new create_info_icon(10, -8, -30, 'imageInfo1')
@@ -42,17 +47,16 @@ setTimeout(() => {
 
 //event-click ikony-obrazek
 infoicon1.element.addEventListener('pointerdown', () => {
-  console.log('pointer clicked');
-  const infodiv1 = new invoDivClean("120px",tytuly[0], teksty[0]);
+  console.log('pointer clicked'); 
   document.body.appendChild(infodiv1.main)
   infodiv1.main.style.visibility = 'visible';
-  infoicon2.element.style.visibility = 'hidden';
+  infoicon1.element.style.visibility = 'hidden';
 
 
   infodiv1.offButton.addEventListener("click", function () {
 
       infodiv1.main.style.visibility = 'hidden';
-      infoicon2.element.style.visibility = 'visible';
+      infoicon1.element.style.visibility = 'visible';
   })
 
 })

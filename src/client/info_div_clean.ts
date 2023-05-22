@@ -15,7 +15,7 @@ export class invoDivClean {
         this.main.textContent = tytul;
         this.main.style.color = 'black'
         this.main.style.height = wysokosc;
-        this.main.style.width = "700px";
+        this.main.style.width = "480px";
         this.main.style.fontSize = "15px";
         this.main.style.fontFamily= "arial"
         this.main.style.textAlign = "center";
@@ -36,6 +36,7 @@ export class invoDivClean {
         this.offButton.className = 'offButton'
         this.offButton.style.cursor='pointer'
         this.offButton.style.color='black'
+        this.offButton.style.fontSize='12px'
         this.offButton.style.fontWeight='bold'
         this.offButton.textContent = '[Zamknij]'
         
