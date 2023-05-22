@@ -4,6 +4,9 @@ import { panorama_form } from './panorama_create';
 import { create_info_icon } from './info_icon';
 import { invoDiv } from './info_div';
 import { panorama3,navicon4,navicon5 } from './panorama3';
+import { invoDivClean } from './info_div_clean';
+import { tytuly } from './tytuly';
+import { teksty } from './teksty';
 
 //dodawanie panoramy
 export const panorama4 = new panorama_form('./sad3.png').main;
@@ -17,6 +20,9 @@ export const navicon6 = new create_icon(0, -13, -20,'nav6');
 navicon6.element.addEventListener('pointerdown', () => {
     panorama4.remove(navicon6.main);
     panorama4.remove(infoicon4.main)
+    panorama4.remove(infoicon5.main)
+    panorama4.remove(infoicon6.main)
+    panorama4.remove(infoicon7.main)
     scene.remove(panorama4);
     scene.add(panorama3);
     panorama3.add(navicon4.main);
@@ -28,13 +34,13 @@ navicon6.element.addEventListener('pointerdown', () => {
 })
 
 //dodawanie ikony-obrazek
-export const infoicon4 = new create_info_icon(15, 12, -20, 'imageInfo4')
-panorama4.add(infoicon4.main)
+export const infoicon4 = new create_info_icon(15, -3, 30, 'imageInfo4')
+//panorama4.add(infoicon4.main)
 
 //event-click ikony-obrazek
 infoicon4.element.addEventListener('pointerdown', () => {
     console.log('pointer clicked');
-    const infodiv4 = new invoDiv('./picture3_przeciek.png');
+    const infodiv4 = new invoDivClean("120px", tytuly[3], teksty[3]);
     document.body.appendChild(infodiv4.main)
     infodiv4.main.style.visibility = 'visible';
     infoicon4.element.style.visibility = 'hidden';
@@ -43,6 +49,57 @@ infoicon4.element.addEventListener('pointerdown', () => {
         infodiv4.main.style.visibility = 'hidden';
         infoicon4.element.style.visibility = 'visible';
     })
+})
 
+//dodawanie ikony-obrazek
+export const infoicon5 = new create_info_icon(0, 2, 30, 'imageInfo5')
+//panorama4.add(infoicon4.main)
+
+//event-click ikony-obrazek
+infoicon5.element.addEventListener('pointerdown', () => {
+    console.log('pointer clicked');
+    const infodiv5 = new invoDivClean("120px", tytuly[2], teksty[2]);
+    document.body.appendChild(infodiv5.main)
+    infodiv5.main.style.visibility = 'visible';
+    infoicon5.element.style.visibility = 'hidden';
+
+    infodiv5.offButton.addEventListener("click", function () {
+        infodiv5.main.style.visibility = 'hidden';
+        infoicon5.element.style.visibility = 'visible';
+    })
+})
+
+//dodawanie ikony-obrazek
+export const infoicon6 = new create_info_icon(50, -10, 30, 'imageInfo6')
+
+//event-click ikony-obrazek
+infoicon6.element.addEventListener('pointerdown', () => {
+    console.log('pointer clicked');
+    const infodiv6 = new invoDivClean("150px", tytuly[4], teksty[4]);
+    document.body.appendChild(infodiv6.main)
+    infodiv6.main.style.visibility = 'visible';
+    infoicon6.element.style.visibility = 'hidden';
+
+    infodiv6.offButton.addEventListener("click", function () {
+        infodiv6.main.style.visibility = 'hidden';
+        infoicon6.element.style.visibility = 'visible';
+    })
+})
+
+//dodawanie ikony-obrazek
+export const infoicon7 = new create_info_icon(-50, -10, 30, 'imageInfo7')
+
+//event-click ikony-obrazek
+infoicon7.element.addEventListener('pointerdown', () => {
+    console.log('pointer clicked');
+    const infodiv7 = new invoDivClean("150px", tytuly[5], teksty[5]);
+    document.body.appendChild(infodiv7.main)
+    infodiv7.main.style.visibility = 'visible';
+    infoicon7.element.style.visibility = 'hidden';
+
+    infodiv7.offButton.addEventListener("click", function () {
+        infodiv7.main.style.visibility = 'hidden';
+        infoicon7.element.style.visibility = 'visible';
+    })
 })
 

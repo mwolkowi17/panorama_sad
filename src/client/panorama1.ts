@@ -2,7 +2,7 @@ import { create_icon } from './navigation_icon';
 import { panorama2,navicon2,navicon3 } from './panorama2';
 import { scene } from './client';
 import { panorama_form } from './panorama_create';
-import { infoicon2,infoicon3 } from './panorama2';
+import { infoicon2} from './panorama2';
 import { create_info_icon } from './info_icon';
 //import { invoDiv } from './info_div';
 import { invoDivClean } from './info_div_clean';
@@ -27,7 +27,7 @@ navicon1.element.addEventListener('pointerdown', () => {
     panorama2.add(navicon2.main);
     panorama2.add(navicon3.main);
     navicon1.reset_size();
-    //panorama2.add(infoicon2.main)
+    panorama2.add(infoicon2.main)
     //panorama2.add(infoicon3.main)
     
    
@@ -43,7 +43,7 @@ setTimeout(() => {
 //event-click ikony-obrazek
 infoicon1.element.addEventListener('pointerdown', () => {
   console.log('pointer clicked');
-  const infodiv1 = new invoDivClean("100px",tytuly[0], teksty[0]);
+  const infodiv1 = new invoDivClean("120px",tytuly[0], teksty[0]);
   document.body.appendChild(infodiv1.main)
   infodiv1.main.style.visibility = 'visible';
   infoicon2.element.style.visibility = 'hidden';

@@ -1,1 +1,1 @@
-export const tytuly=['Schody']
+export const tytuly=['Schody','Ścieżka','Ogrodzenie','Droga szutrowa','Brak chodników','Droga asfaltowa']

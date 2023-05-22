@@ -1,1 +1,6 @@
-export const teksty=['Utrudnieniem w poruszaniu się osób starszych i niesamodzielnych mogą być nierówne powierzchnie czy schody.']
+export const teksty=['Utrudnieniem w poruszaniu się osób starszych i niesamodzielnych mogą być nierówne powierzchnie czy schody.',
+'Trawiaste ścieżki wokół domu mogą być dużym utrudnieniem dla   osób poruszających się przy pomocy laski, chodzika z podpórka lub na wózku inwalidzkim. Może one uniemożliwić wyjście do ogrodu czy przydomowego sadu.',
+'Ogrodzenie domu może utrudnić wychodzenie osobom poruszającym się przy pomocy laski, chodzika lub na wózku inwalidzkim. Aby wyjść, muszą się najpierw dostać do furtki lub bramy.',
+'Barierą dla osób starszych i z niepełnosprawnością narządów ruchu w przemieszczaniu się na zewnątrz może być także droga szutrowa.',
+'Dużym utrudnieniem w poruszaniu się osób starszych i z niepełnosprawnością narządów ruchu, a także z zaburzoną orientacją, może być brak chodników wzdłuż drogi. Może to wzmagać poczucie braku pewności i bezpieczeństwa.',
+'Pewnym ułatwieniem dla osób poruszających się przy pomocy laski, chodzika z podpórka lub na wózku inwalidzkim mogą być drogi asfaltowe, pozwalające na w miarę bezpieczne i wygodne przemieszczanie się, choćby na niewielkie odległości.']

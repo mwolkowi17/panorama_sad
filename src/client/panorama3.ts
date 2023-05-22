@@ -1,11 +1,9 @@
 import { create_icon } from './navigation_icon';
 import { scene } from './client';
 import { panorama2,navicon2,navicon3 } from './panorama2';
-import { panorama4 } from './panorama4';
+import { infoicon6, panorama4, infoicon4,infoicon5,infoicon7  } from './panorama4';
 import { panorama_form } from './panorama_create';
-import { infoicon2,infoicon3 } from './panorama2';
-import { create_info_icon } from './info_icon';
-import { invoDiv } from './info_div';
+import { infoicon2 } from './panorama2';
 import { navicon6 } from './panorama4';
 
 //dodawanie panoramy
@@ -29,6 +27,10 @@ navicon4.element.addEventListener('pointerdown', () => {
     // panorama2.add(infoicon2.main)
     // panorama2.add(infoicon3.main)
     panorama4.add(navicon6.main)
+    panorama4.add(infoicon4.main)
+    panorama4.add(infoicon5.main)
+    panorama4.add(infoicon6.main)
+    panorama4.add(infoicon7.main)
     navicon4.reset_size();
     console.log('nav4')
 })
@@ -44,26 +46,8 @@ navicon5.element.addEventListener('pointerdown', () => {
     panorama2.add(navicon3.main);
     navicon5.reset_size();
     panorama2.add(infoicon2.main)
-    panorama2.add(infoicon3.main)
+  
     console.log('nav5')
 })
 
 //dodawanie ikony-obrazek
-export const infoicon4 = new create_info_icon(15, 12, -20, 'imageInfo4')
-panorama3.add(infoicon4.main)
-
-//event-click ikony-obrazek
-infoicon4.element.addEventListener('pointerdown', () => {
-    console.log('pointer clicked');
-    const infodiv4 = new invoDiv('./picture3_przeciek.png');
-    document.body.appendChild(infodiv4.main)
-    infodiv4.main.style.visibility = 'visible';
-    infoicon4.element.style.visibility = 'hidden';
-
-    infodiv4.offButton.addEventListener("click", function () {
-        infodiv4.main.style.visibility = 'hidden';
-        infoicon4.element.style.visibility = 'visible';
-    })
-
-})
-
