@@ -11,7 +11,7 @@ export class invoDivClean {
         this.main = document.createElement('div');
         this.main.className = 'display';
         this.main.id = 'display1';
-        this.main.style.backgroundColor = 'rgba(255,255,255,0.5)';
+        this.main.style.backgroundColor = 'rgba(255,255,255,1)';
         this.main.textContent = tytul;
         this.main.style.color = 'black'
         this.main.style.height = wysokosc;
@@ -29,6 +29,7 @@ export class invoDivClean {
         this.valvleDetails.className = 'details_valve';
         this.valvleDetails.textContent = tekst
         this.valvleDetails.style.fontWeight= "normal"
+        this.valvleDetails.style.margin = '15px'
         this.main.appendChild(this.valvleDetails);
         
 
